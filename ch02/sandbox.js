@@ -54,4 +54,48 @@ console.log("Area:", radius ** 2 * pi);
 
 // increments
 let i = 10;
-console.log("i++", ++i);
+i++;
+i += 10;
+console.log("i", i);
+
+// template litterals
+const author = "Mario";
+const title = "Best of 2019";
+const likes = 12;
+console.log(`${author} wrote ${title}: ${likes} likes`);
+
+// Arrays
+let ninjas = ["Mario", "Maria", "Mariarosa"];
+
+// array methods
+const joins = ninjas.join("-");
+console.log("Ninjas joined:", joins);
+const maryIndex = ninjas.indexOf("Mariarosa");
+console.log(`${ninjas[2]} is ninja ${maryIndex}`);
+const added = ninjas.concat(["Roberto", "Marianna"]);
+console.log("Added ninjas:", added);
+const push = ninjas.push("Roberto"); // return the length on new array
+console.log("Push one ninja:", push, ninjas);
+const pop = ninjas.pop(); // remove last
+console.log("Popped ninja:", pop);
+
+// null and undefined
+let ageNotDef;
+console.log("Undefined:", ageNotDef, ageNotDef + 3, `age is ${ageNotDef}`);
+ageNotDef = null;
+console.log("Null:", ageNotDef, ageNotDef + 3, `age is ${ageNotDef}`);
+
+// boolean
+console.log("Mail includes @:", mail.includes("@"));
+
+const x = 30;
+const y = "30";
+console.log("x == y:", x == y);
+console.log("x === y:", x === y);
+
+// types convertion
+let score = "100";
+console.log("add 1 to string:", score + 1);
+console.log("add 1 to number:", Number(score) + 1);
+console.log("Type of score:", typeof score);
+console.log("Empty string is:", Boolean(""));
