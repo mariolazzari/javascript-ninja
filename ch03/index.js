@@ -57,3 +57,54 @@ if (!user) {
 }
 
 // breack and continue
+const scores = [10, 50, 20, 0, 35, 15, 100, 80];
+for (let i = 0; i < scores.length; i++) {
+  // skip 0
+  if (scores[i] === 0) {
+    continue;
+  }
+  console.log("score:", scores[i]);
+
+  if (scores[i] === 100) {
+    console.log("TOP 100!");
+    break;
+  }
+}
+
+// switch case
+const grade = "D";
+let msg = "You got: ";
+
+switch (grade) {
+  case "A":
+    msg += "A";
+    break;
+
+  case "B":
+    msg += "B";
+    break;
+
+  case "C":
+    msg += "C";
+    break;
+
+  case "D":
+    msg += "D";
+    break;
+
+  case "E":
+    msg += "E";
+    break;
+
+  default:
+    msg = "not valid grade";
+}
+console.log(msg);
+
+// scope
+//let age = 44; // error: already defined
+if (true) {
+  let age = 44; // local value
+  console.log("age (inside)", age);
+}
+console.log("age (outside)", age);
